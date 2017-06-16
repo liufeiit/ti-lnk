@@ -1,0 +1,22 @@
+package me.mos.lnk.groups.message;
+
+import java.util.List;
+
+/**
+ * @author 刘飞 E-mail:liufei_it@126.com
+ * 
+ * @version 1.0.0
+ * @since 2015年6月3日 上午11:44:31
+ */
+public interface GroupMessageProvider {
+
+	long save(GroupMessage message);
+	
+	List<GroupMessage> queryGroupMessageList(long groupId);
+    
+    List<GroupMessage> queryUserGroupMessageList(long groupId, long tid);
+    
+    List<GroupMessage> queryUserGroupMessageList(long tid);
+	
+	int delete(long id);
+}
